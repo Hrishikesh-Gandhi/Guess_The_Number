@@ -1,7 +1,7 @@
 
       const number = NumberGenrate();
       let digitCount = 0;//to count no of digit entered
-      let screenDisplay = ['', '','',''];
+      let screenDisplay = ['', '','',];
       const guesses =[];
        function NumberGenrate()
       {
