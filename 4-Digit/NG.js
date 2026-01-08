@@ -24,9 +24,11 @@
         for(let i=0;i<=guesses.length-1;i++)//to check if number is already guessed
           {
             if(guesses[i][1][0] === guess) 
-            alert('Number is Alreaduy Guessed')
+            {
+            alert('Number is Alreaduy Guessed');
           clearScreen();
           return;
+          }
           }
         guesses.push([guess,processGuess(guess)]);
        console.log(guesses);
