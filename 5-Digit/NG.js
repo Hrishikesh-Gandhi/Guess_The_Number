@@ -6,7 +6,7 @@
        function NumberGenrate()
       {
         const min =0;
-        const max =9999;
+        const max =99999;
         const random = Math.floor(Math.random() * (max - min) + min);
         return random;
       }
@@ -177,4 +177,5 @@
           document.querySelector('.Guesses').innerHTML = guessHtml;
         }
         
+
     
