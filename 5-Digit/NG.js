@@ -15,7 +15,7 @@
         
        if(screenDisplay.some(digit => digit === ''))//check if any digit is empty
           {
-            alert("Please enter a 4-digit number");
+            alert("Please enter a 5-digit number");
             return;
           }
           else//if all digits are entered
@@ -34,7 +34,7 @@
        console.log(guesses);
        renderGuesses();
         clearScreen();
-       if(guesses[guesses.length-1][1][1] == 4)
+       if(guesses[guesses.length-1][1][1] == 5)
        {
         document.querySelector('.IO').innerHTML = `
         <div class="End">
@@ -71,7 +71,7 @@
         var NumD =[];
         //Nested Loop to check no. of number matching
         
-        for(let i=1;i<=4;i++)
+        for(let i=1;i<=5;i++)
         {
             let curr = Math.floor((c%Math.pow(10,i))/Math.pow(10,i-1));
             //to find i th didgit of number
@@ -79,7 +79,7 @@
              if(check(curr,NumD,v,i))
               {
              {
-                 for(let j=1;j<=4;j++)
+                 for(let j=1;j<=5;j++)
              {
 
            let currc = Math.floor((v%Math.pow(10,j))/Math.pow(10,j-1));
@@ -142,7 +142,7 @@
                                   }
       function display(Num)//Display the number on screen
         {
-          if(digitCount < 4)
+          if(digitCount < 5)
           
           screenDisplay[digitCount] = Num;
           digitCount++;    
@@ -157,10 +157,11 @@
           document.querySelector('.Digit2').innerHTML = screenDisplay[1];
           document.querySelector('.Digit3').innerHTML = screenDisplay[2];
           document.querySelector('.Digit4').innerHTML = screenDisplay[3];
+          document.querySelector('.Digit5').innerHTML = screenDisplay[4];
         }
         function clearScreen()
         {
-          screenDisplay = ['', '','',''];
+          screenDisplay = ['', '','','',''];
           digitCount = 0;
           updateDisplay();
         }
