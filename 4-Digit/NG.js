@@ -21,7 +21,7 @@
           else//if all digits are entered
       {
         const guess = screenDisplay.join('');
-        for(let i=0;i<=guesses.length;i++)//to check if number is already guessed
+        for(let i=0;i<=guesses.length-1;i++)//to check if number is already guessed
           {
             if(guesses[i][1][0] === guess) 
             alert('Number is Alreaduy Guessed')
