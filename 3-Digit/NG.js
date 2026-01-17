@@ -1,7 +1,7 @@
 
       const number = NumberGenrate();
       let digitCount = 0;//to count no of digit entered
-      let screenDisplay = ['', '',''];
+      let screenDisplay = ['', '','',];
       const guesses =[];
        function NumberGenrate()
       {
@@ -21,11 +21,11 @@
           else//if all digits are entered
       {
         const guess = screenDisplay.join('');
-        for(let i=0;i<=guesses.length-1;i++)//to check if number is already guessed
+        for(let i=0;i<guesses.length;i++)//to check if number is already guessed
           {
-            if(guesses[i][1][0] === guess) 
+            if(guesses[i][0] === guess) 
             {
-            alert('Number is Alreaduy Guessed');
+            alert('Number is Already Guessed');
           clearScreen();
           return;
           }
@@ -42,10 +42,10 @@
         GUESSES: ${guesses.length}<br>
         THE NUMBER IS ${number}<br>
         <button onclick="window.location.reload();
-">
+"class="h";>
          PLAY AGAIN
         </button>
-        <button onclick="window.location.href='https://hrishikesh-gandhi.github.io/Guess_The_Number/';">
+        <button onclick="window.location.href='https://hrishikesh-gandhi.github.io/Guess_The_Number/';"class="h";>
          BACK TO MENU
         </button>
         </div>`
@@ -175,5 +175,4 @@
           document.querySelector('.Guesses').innerHTML = guessHtml;
         }
         
-
     
