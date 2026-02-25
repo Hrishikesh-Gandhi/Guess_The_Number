@@ -1,8 +1,8 @@
 
-      const number = NumberGenrate();
+      const number = NumberGenrate();//Generate a random number
       let digitCount = 0;//to count no of digit entered
-      let screenDisplay = ['', '','',''];
-      const guesses =[];
+      let screenDisplay = ['', '','',''];//to store the digits entered
+      const guesses =[];//to store the guesses
        function NumberGenrate()
       {
         const min =0;
@@ -49,7 +49,7 @@
         </button>
         </div>`
         ;
-        document.getElementById("demo").setAttribute("class", "EndBody");  
+        document.getElementById("demo").setAttribute("class", "EndBody");//Add Tag to body  
        }
        
       }
@@ -157,7 +157,7 @@
           document.querySelector('.Digit3').innerHTML = screenDisplay[2];
           document.querySelector('.Digit4').innerHTML = screenDisplay[3];
         }
-        function clearScreen()
+        function clearScreen()//Clear the display
         {
           screenDisplay = ['', '','',''];
           digitCount = 0;
@@ -165,10 +165,16 @@
         }
         function renderGuesses()//Render the guesses
         {
-          let guessHtml = `<div>ALL GUESSES !!</div>`
+          let guessHtml = 
+          `
+          <div>ALL GUESSES !!</div>
+          <div>Output format Below</div>
+          <div style="font-size: 20x;">Guess No. : Number - Correct Digits/Correct Position</div>
+          `
           for(let i=0;i<guesses.length;i++)
           {
             const guess = guesses[i];
+           
             guessHtml+=`<div>Guess ${i+1} : ${guess[0]}  - ${guess[1][0]}/${guess[1][1]}</div>`
             
           }

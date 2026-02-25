@@ -165,7 +165,12 @@
         }
         function renderGuesses()//Render the guesses
         {
-          let guessHtml = `<div>ALL GUESSES !!</div>`
+          let guessHtml = 
+          `
+          <div>ALL GUESSES !!</div>
+           <div>Output format Below</div>
+          <div style="font-size: 20x;">Guess No. : Number - Correct Digits/Correct Position</div>
+          `
           for(let i=0;i<guesses.length;i++)
           {
             const guess = guesses[i];
